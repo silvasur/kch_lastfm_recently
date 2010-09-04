@@ -1,0 +1,11 @@
+How to install kch_lastfm_recently:
+
+1. "Compile" the plugin by typing 'make'.
+2. Login to your Textpattern installation.
+3. Navigate to 'Admin' > 'Plugins'
+4. Copy the content of the file kch_lastfm_recently.txt to the 'Install Plugin'
+   Text box and click 'Upload'.
+5. Activate the Plugin by clicking the 'No' in the column 'Active' in the row of
+   the kch_lastfm_recently plugin.
+6. Read the Help of the plugin (there is a 'help' link in the 'Manage' column)
+   to learn how to integrate the plugin into your site.
