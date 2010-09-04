@@ -1,0 +1,15 @@
+kch_lastfm_recently v.0.5.1
+===========================
+
+A simple Textpattern plugin, which will return a list of recently listened
+songs.
+
+How to Install
+--------------
+
+See 'INSTALL'.
+
+Documentation
+-------------
+
+See 'Documentation.html'

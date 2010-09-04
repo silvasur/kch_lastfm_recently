@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+ <title>kch_lastfm_recently documentation</title>
+</head>
+<body>
+<h1>kch_lastfm_recently</h1>
+
+	<p>Returns a unsorted list of your recently listened songs.</p>
+
+	<h2>Usage</h2>
+
+	<p>Insert this txp tag to your template:<br />
+<code>&lt;txp:kch_lastfm_recently /&gt;</code></p>
+
+	<p>Here is a table of parameters:</p>
+
+	<table>
+		<tr>
+			<th>Parameter</th>
+			<th>Needed</th>
+			<th>Default</th>
+			<th>Explanation</th>
+		</tr>
+		<tr>
+			<td>name</td>
+			<td>Yes</td>
+			<td><code> </code></td>
+			<td>Your last.fm account name</td>
+		</tr>
+		<tr>
+			<td>count</td>
+			<td>No</td>
+			<td>3</td>
+			<td>How many songs should be listed</td>
+		</tr>
+		<tr>
+			<td>cover</td>
+			<td>No</td>
+			<td>1</td>
+			<td>Whether album covers should be displayed, or not</td>
+		</tr>
+		<tr>
+			<td>track_format</td>
+			<td>No</td>
+			<td>{ar} &#8211; {s} ({t})</td>
+			<td>Format of track information (See beyond)</td>
+		</tr>
+		<tr>
+			<td>date_format</td>
+			<td>No</td>
+			<td>%d %h %Y %H:%M:%S</td>
+			<td>Time/Date format as used by strftime<sup class="footnote"><a href="#fn16153874754c5696e133803">1</a></sup></td>
+		</tr>
+		<tr>
+			<td>caching</td>
+			<td>No</td>
+			<td>1</td>
+			<td>Should we enable caching? (See section caching)</td>
+		</tr>
+	</table>
+
+	<p>And here is a list of <strong>track_format</strong> tokens (case sensitive):
+	<ul>
+		<li><code>{ar}</code> &#8211; <strong>Ar</strong>tist</li>
+		<li><code>{s}</code> &#8211; <strong>S</strong>ong name</li>
+		<li><code>{al}</code> &#8211; <strong>Al</strong>bum name ( will turn to &#8220;(?)&#8221;, if Album is unknown)</li>
+		<li><code>{t}</code> &#8211; The <strong>T</strong>ime, you&#8217;ve listened to the song</li>
+	</ul></p>
+
+	<h2>Output</h2>
+
+	<p>The output will be a unsorted list (<code>&lt;ul&gt; ... &lt;/ul&gt;</code>) with the <span class="caps">CSS</span> class <code>kch_lastfm_recently</code> .<br />
+The single list elements have this format:</p>
+
+<pre><code>&lt;li&gt;
+  &lt;img src=&quot;http://lastfm-or-amazon-server.foo/path/to/image&quot; alt=&quot;Album cover&quot; style=&quot;width:60px;height:60px;&quot; /&gt;
+  &lt;a href=&quot;http://last.fm/path/to/song/informations&quot;&gt;The parsed track_format&lt;/a&gt;&lt;/li&gt;&quot;;
+&lt;/li&gt;
+</code></pre>
+
+	<h2>Hidden errors</h2>
+
+	<p>If something went wrong, <code>&lt;txp:kch_lastfm_recently /&gt;</code> will not displaying anything, but it will write an <span class="caps">HTML</span> comment with an errormessage. So if you can not see anything, first check the returned <span class="caps">HTML</span> code, if there is a comment with an error message.</p>
+
+	<h2>Caching</h2>
+
+	<p>If you have enabled caching, kch_lastfm_recently will save the results to &#8220;/my/textpattern/installation/textpattern/cache&#8221;.<br />
+So if you want to use caching, you have to create a directory called &#8220;caching&#8221; inside the textpattern directory and the <span class="caps">HTTP</span> server must have write permission to it.<br />
+Results are cached for one minute. If you have multiple <code>&lt;txp:kch_lastfm_recently /&gt;</code> tags with different configurations, this is not a problem, because the cache file gets a unique identifier based on the parameters.<br />
+If you have the possibility to create the cache directory and set the required permissions, you really should use this feature, because the last.fm <span class="caps">API</span> calls can generate a lot of traffic, if your website has much hits.</p>
+
+	<p id="fn16153874754c5696e133803" class="footnote"><sup>1</sup> Documentation of <a href="http://php.net/strftime">strftime</a></p>
+</body></html>

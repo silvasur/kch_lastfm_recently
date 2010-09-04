@@ -8,4 +8,5 @@ How to install kch_lastfm_recently:
 5. Activate the Plugin by clicking the 'No' in the column 'Active' in the row of
    the kch_lastfm_recently plugin.
 6. Read the Help of the plugin (there is a 'help' link in the 'Manage' column)
-   to learn how to integrate the plugin into your site.
+   or the 'Documentation.html' in this directory to learn how to integrate the
+   plugin into your site.
