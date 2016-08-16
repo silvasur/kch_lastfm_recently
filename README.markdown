@@ -8,13 +8,13 @@ If you do not want to compile it yourself
 -----------------------------------------
 
 You can download a precompiled version at:
-http://kch42.de/progs/txp_stuff/kch_lastfm_recently-0.5.1.txt
+http://hi-im.laria.me/progs/txp_stuff/kch_lastfm_recently-0.5.1.txt
 
 Leaving a comment
 -----------------
 
 If you like / dislike this plugin you can write a comment at:
-http://kch42.de/hp/en/programming/35/my-textpattern-plugins
+http://hi-im.laria.me/hp/en/programming/35/my-textpattern-plugins
 
 How to Install
 --------------

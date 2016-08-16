@@ -4,7 +4,7 @@
  * kch_lastfm_recently.php
  * This file is part of kch_lastfm_recently
  *
- * Copyright (C) 2010 - Kevin Chabowski
+ * Copyright (C) 2010 - Laria Carolin Chabowski
  *
  * kch_lastfm_recently is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -34,8 +34,8 @@
 # $plugin['name'] = 'abc_plugin';
 
 $plugin['version'] = '0.5.1';
-$plugin['author'] = 'Kevin Chabowski';
-$plugin['author_uri'] = 'http://kch42.de/';
+$plugin['author'] = 'Laria Carolin Chabowski';
+$plugin['author_uri'] = 'http://hi-im.laria.me/';
 $plugin['description'] = 'Add your recently played tracks from last.fm to your website.';
 
 // Plugin types:
